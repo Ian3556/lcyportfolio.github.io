@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AutoDeal</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pages/contact.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listings.html" class="nav-link">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link">Sell</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Get in touch with our team for any questions or support you need</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-layout">
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <h2 class="contact-info-title">Get in Touch</h2>
+                <p class="contact-info-subtitle">
+                    Ready to buy or sell? Have questions about our services? We'd love to hear from you!
+                </p>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <img src="assets/logos/email.png" alt="Email" class="icon-image">
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Us</h3>
+                        <p>General inquiries and support</p>
+                        <a href="mailto:info@autodeal.com">info@autodeal.com</a>
+                        <p>Sales inquiries: <a href="mailto:sales@autodeal.com">sales@autodeal.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <img src="assets/logos/phone.png" alt="call" class="icon-image">
+                    </div>
+                    <div class="contact-details">
+                        <h3>Call Us</h3>
+                        <p>Speak with our customer service team</p>
+                        <a href="tel:1-800-288-6332">+60 17-543-2133</a>
+                        <p>Available 24/7 for your convenience</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <img src="assets/logos/placeholder.png" alt="Location" class="icon-image">
+                    </div>
+                    <div class="contact-details">
+                        <h3>Visit Our Office</h3>
+                        <p>Sunway University<br>
+                        5, Jalan Universiti, Bandar Sunway<br>
+                        47500 Petaling Jaya, Selangor, Malaysia</p>
+                        <p>Free parking available on campus</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <img src="assets/logos/live-chat.png" alt="LiveChat" class="icon-image">
+                    </div>
+                    <div class="contact-details">
+                        <h3>Live Chat</h3>
+                        <p>Get instant help from our support team</p>
+                        <p>Available on our website 24/7</p>
+                        <p>Average response time: 2 minutes</p>
+                    </div>
+                </div>
+
+                <div class="business-hours">
+                    <h3>Business Hours</h3>
+                    <ul class="hours-list">
+                        <li class="hours-item">
+                            <span class="hours-day">Monday - Friday</span>
+                            <span class="hours-time">9:00 AM - 8:00 PM</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="hours-day">Saturday</span>
+                            <span class="hours-time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="hours-item">
+                            <span class="hours-day">Sunday</span>
+                            <span class="hours-time">10:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2 class="form-title">Send us a Message</h2>
+                <p class="form-subtitle">
+                    Fill out the form below and we'll get back to you as soon as possible.
+                </p>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName" class="required">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        <div class="error-message" id="fullNameError"></div>
+                        <div class="success-message" id="fullNameSuccess"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress" class="required">Email Address</label>
+                        <input type="email" id="emailAddress" name="emailAddress" placeholder="Enter your email address" required>
+                        <div class="error-message" id="emailAddressError"></div>
+                        <div class="success-message" id="emailAddressSuccess"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(555) 123-4567">
+                        <div class="error-message" id="phoneNumberError"></div>
+                        <div class="success-message" id="phoneNumberSuccess"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="required">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="buying">Buying a Car</option>
+                            <option value="selling">Selling a Car</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="subjectError"></div>
+                        <div class="success-message" id="subjectSuccess"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="required">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                        <div class="success-message" id="messageSuccess"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        Send Message
+                    </button>
+
+                    <div class="form-loading" id="formLoading">
+                        <div class="loading-spinner"></div>
+                        <span>Sending your message...</span>
+                    </div>
+
+                    <div class="form-success" id="formSuccess">
+                        <strong>Message sent successfully!</strong><br>
+                        Thank you for contacting us. We'll get back to you within 24 hours.
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <div class="container">
+                <h2 class="map-title">Find Our Location</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Sunway%20University%20Malaysia&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Sunway University Location">
+                    </iframe>
+                    <div style="margin-top: 1rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                        <p><strong>Our Location:</strong> Sunway University, 5, Jalan Universiti, Bandar Sunway, 47500 Petaling Jaya, Selangor, Malaysia</p>
+                        <p><strong>Get Directions:</strong> <a href="https://www.google.com/maps/dir//Sunway+University,+5,+Jalan+Universiti,+Bandar+Sunway,+47500+Petaling+Jaya,+Selangor,+Malaysia" target="_blank" style="color: var(--primary-color); text-decoration: none;">Click here for directions</a></p>
+                        <p><strong>Public Transport:</strong> Accessible via BRT Sunway Line and various bus routes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p>📧 info@autodeal.com</p>
+                        <p>📞 +60 17-543-2133</p>
+                        <p>📍 Sunway University, Bandar Sunway, Petaling Jaya, Selangor, Malaysia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/contact.js"> </script>
+</body>
+</html>

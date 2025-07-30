@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDeal - Find Your Next Car, Hassle-Free</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link  rel="stylesheet" href="./css/pages/index.css"
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="listings.html" class="nav-link">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link">Sell</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Find Your Next Car, Hassle-Free</h1>
+                    <p class="hero-subtitle">Discover thousands of quality vehicles from trusted dealers and private sellers</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="search-form">
+                            <select class="search-select" id="makeSelect">
+                                <option value="">Make</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="ford">Ford</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mercedes">Mercedes-Benz</option>
+                                <option value="audi">Audi</option>
+                                <option value="porsche">Porsche</option>
+                                <option value="rangerover">Range Rover</option>
+                            </select>
+
+                            <select class="search-select" id="modelSelect">
+                                <option value="">Model</option>
+                                <option value="macan">Macan</option>
+                                <option value="a200">A200</option>
+                                <option value="camry">Camry</option>
+                                <option value="corolla">Corolla</option>
+                                <option value="SV">SV</option>
+                                <option value="mustang">Mustang</option>
+                            </select>
+
+                            <select class="search-select" id="yearSelect">
+                                <option value="">Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                            </select>
+
+                            <input type="text" class="search-input" placeholder="Location" id="locationInput">
+
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- Call-to-Action Buttons -->
+                    <div class="cta-buttons">
+                        <a href="listings.html" class="btn btn-primary">Buy a Car</a>
+                        <a href="sell.html" class="btn btn-secondary">Sell Your Car</a>
+                        <a href="listings.html" class="btn btn-outline">Browse All Listings</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- USPs Section -->
+        <section class="usps">
+            <div class="container">
+                <h2 class="section-title">Why Choose AutoDeal?</h2>
+                <div class="usps-grid">
+                    <div class="usp-card">
+                        <div class="usp-icon">✅</div>
+                        <h3>Certified Pre-Owned</h3>
+                        <p>All vehicles undergo rigorous inspection and certification process for your peace of mind.</p>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">💰</div>
+                        <h3>Free Valuation</h3>
+                        <p>Get an instant, accurate valuation of your vehicle with our advanced pricing algorithm.</p>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">🚚</div>
+                        <h3>Nationwide Delivery</h3>
+                        <p>We deliver your dream car right to your doorstep, anywhere in the country.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Listings Section -->
+        <section class="featured-listings">
+            <div class="container">
+                <h2 class="section-title">Featured Listings</h2>
+                <div class="listings-grid">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/Audi A1 white.png" alt="Audi A1 white">
+                            <div class="car-badge">Certified</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>Audi A1 white</h4>
+                            <p class="car-price">$45,990</p>
+                            <p class="car-details">15,000 miles • Automatic • Gasoline</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/Macan.webp" alt="2022 porsche macan">
+                            <div class="car-badge new-arrival">New Arrival</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>2022 Porsche Macan</h4>
+                            <p class="car-price">$28,500</p>
+                            <p class="car-details">8,500 miles • Automatic • Gasoline</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/toyota camry GREY.png" alt="2021 Toyota Camry">
+                            <div class="car-badge negotiable">Negotiable</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>2021 Toyota Camry</h4>
+                            <p class="car-price">$32,900</p>
+                            <p class="car-details">22,000 miles • Manual • Hybrid</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/mercedes A200 sedan.png" alt="2023 Mercedes-Benz A200 Sedan">
+                            <div class="car-badge">Certified</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>2023 Mercedes-Benz A200 Sedan</h4>
+                            <p class="car-price">$52,800</p>
+                            <p class="car-details">5,200 miles • Automatic • Gasoline</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/ford mustang GREY.png" alt="2020 Ford Mustang">
+                            <div class="car-badge negotiable">Negotiable</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>2020 Ford Mustang</h4>
+                            <p class="car-price">$38,750</p>
+                            <p class="car-details">18,500 miles • Manual • Gasoline</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="carimages/bmw iX1.png" alt="2022 Audi A4">
+                            <div class="car-badge">Certified</div>
+                        </div>
+                        <div class="car-info">
+                            <h4>2022 BMW iX1</h4>
+                            <p class="car-price">$41,200</p>
+                            <p class="car-details">12,800 miles • Automatic • Gasoline</p>
+                            <a href="details.html" class="btn btn-primary btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-all-container">
+                    <a href="listings.html" class="btn btn-outline-large">View All Listings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Amazing experience! Found the perfect car at a great price. The delivery was quick and the car was exactly as described."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Johnson</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Sold my car in just 3 days! The process was seamless and I got a fair price. Highly recommend AutoDeal."</p>
+                        <div class="testimonial-author">
+                            <strong>Mike Chen</strong>
+                            <span>Verified Seller</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Great customer service and wide selection. The certified pre-owned program gave me confidence in my purchase."</p>
+                        <div class="testimonial-author">
+                            <strong>Emily Rodriguez</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><span class="icon email-icon"></span> info@autodeal.com</p>
+                        <p><span class="icon phone-icon"></span> +60 17-543-2133</p>
+                        <p><span class="icon location-icon"></span> 123 Auto Street, Car City, CC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/index.js"></script>
+</body>
+</html>

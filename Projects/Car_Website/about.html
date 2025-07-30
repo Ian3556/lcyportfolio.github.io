@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AutoDeal</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pages/about.css">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listings.html" class="nav-link">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link">Sell</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About AutoDeal</h1>
+            <p>Meet the team behind the revolutionary car marketplace that's changing how people buy and sell vehicles
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="mission-content">
+                    <p class="mission-text">
+                        At AutoDeal, we're passionate about revolutionizing the automotive marketplace by creating a
+                        seamless,
+                        trustworthy platform where buyers and sellers can connect with confidence. Our mission is to
+                        eliminate
+                        the traditional barriers in car sales by providing transparent pricing, verified listings, and
+                        exceptional
+                        customer service that puts people first.
+                    </p>
+                    <p class="mission-text">
+                        We believe that buying or selling a car should be an exciting experience, not a stressful
+                        ordeal.
+                        That's why we've built a platform that combines cutting-edge technology with human expertise to
+                        create the most user-friendly automotive marketplace in the industry.
+                    </p>
+                </div>
+
+                <div class="mission-values">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Transparency</h3>
+                        <p>We provide clear, honest information about every vehicle, ensuring buyers and sellers can
+                            make informed decisions.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🔒</div>
+                        <h3>Trust & Security</h3>
+                        <p>Our platform prioritizes safety with verified sellers, secure transactions, and comprehensive
+                            protection policies.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⚡</div>
+                        <h3>Innovation</h3>
+                        <p>We continuously improve our platform with the latest technology to enhance the user
+                            experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Our streamlined process makes buying and selling cars simple, secure, and efficient for everyone
+                    involved.
+                </p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">🔍</div>
+                        <h3>Search & Discover</h3>
+                        <p>Browse thousands of verified listings with advanced filters to find your perfect vehicle. Our
+                            intelligent search helps you discover cars that match your specific needs and budget.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">📞</div>
+                        <h3>Connect & Inspect</h3>
+                        <p>Contact sellers directly through our secure messaging system. Schedule viewings, ask
+                            questions, and get detailed information about the vehicle's history and condition.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">✅</div>
+                        <h3>Purchase & Enjoy</h3>
+                        <p>Complete your purchase with confidence using our secure transaction tools. We facilitate
+                            paperwork, arrange delivery, and ensure a smooth ownership transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">
+                    The talented individuals who brought AutoDeal to life through their expertise, dedication, and
+                    innovative thinking.
+                </p>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/Personal-Images/photo_sari_17062025.jpeg" class="member-photo">
+                        <div class="member-name">Sari Kefel</div>
+                        <div class="member-id">Student ID: 24090516</div>
+                        <div class="member-role">Lead Frontend Developer & UI/UX Designer</div>
+                        <div class="member-description">
+                            Sari is a passionate frontend developer with a keen eye for user experience design. he
+                            specializes in creating intuitive interfaces and responsive web applications. With a
+                            background in computer science and design, he brings both technical expertise and creative
+                            vision to every project.
+                        </div>
+                        <div class="member-contributions">
+                            <div class="contributions-title">Key Contributions:</div>
+                            <ul class="contribution-list">
+                                <li class="contribution-item">Homepage design and development</li>
+                                <li class="contribution-item">Responsive navigation and mobile optimization</li>
+                                <li class="contribution-item">Dark/Light theme implementation</li>
+                                <li class="contribution-item">Car listings grid layout and filters</li>
+                                <li class="contribution-item">User interface design and branding</li>
+                                <li class="contribution-item">CSS animations and visual effects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="member-photo" src="assets/Personal-Images/mmexport1710863845632.JPG">
+                        <div class="member-name">Lee Chee Yee</div>
+                        <div class="member-id">Student ID: 24025694</div>
+                        <div class="member-role">Quality Assurance & Testing Specialist</div>
+                        <div class="member-description">
+                            David is meticulous about quality and user experience. He specializes in comprehensive
+                            testing, cross-browser compatibility, and performance optimization. His thorough approach to
+                            quality assurance ensures that every feature works flawlessly across all devices and
+                            browsers.
+                        </div>
+                        <div class="member-contributions">
+                            <div class="contributions-title">Key Contributions:</div>
+                            <ul class="contribution-list">
+                                <li class="contribution-item">Cross-browser compatibility testing</li>
+                                <li class="contribution-item">Mobile responsiveness optimization</li>
+                                <li class="contribution-item">Performance testing and optimization</li>
+                                <li class="contribution-item">Bug testing and resolution</li>
+                                <li class="contribution-item">User experience testing and feedback</li>
+                                <li class="contribution-item">Documentation and project coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="team-member">
+                        <img class="member-photo" src="assets/Personal-Images/Passport Photo.jpg">
+                        <div class="member-name">Lawrence Wai Lok Tang </div>
+                        <div class="member-id">Student ID: 24040107 </div>
+                        <div class="member-role">Backend Logic & Data Management Specialist</div>
+                        <div class="member-description">
+                            Emily excels in backend development and data architecture. She has a strong foundation in
+                            database design and API development, ensuring that data flows seamlessly throughout the
+                            application. Her systematic approach to problem-solving makes her invaluable for complex
+                            technical challenges.
+                        </div>
+                        <div class="member-contributions">
+                            <div class="contributions-title">Key Contributions:</div>
+                            <ul class="contribution-list">
+                                <li class="contribution-item">Car listings database structure and management</li>
+                                <li class="contribution-item">Multi-step form implementation (sell page)</li>
+                                <li class="contribution-item">Data validation and sanitization</li>
+                                <li class="contribution-item">File upload and image handling</li>
+                                <li class="contribution-item">Contact form and messaging system</li>
+                                <li class="contribution-item">Search algorithm optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="team-member">
+                        <div class="member-photo">👨‍💻</div>
+                        <div class="member-name">Michael Chen</div>
+                        <div class="member-id">Student ID: 2021002</div>
+                        <div class="member-role">JavaScript Developer & Authentication Specialist</div>
+                        <div class="member-description">
+                            Michael is a skilled JavaScript developer who focuses on creating dynamic, interactive web
+                            applications. He has extensive experience with modern JavaScript frameworks and specializes
+                            in authentication systems and form handling. His attention to detail ensures robust and
+                            secure user interactions.
+                        </div>
+                        <div class="member-contributions">
+                            <div class="contributions-title">Key Contributions:</div>
+                            <ul class="contribution-list">
+                                <li class="contribution-item">User authentication system (login/signup)</li>
+                                <li class="contribution-item">Form validation and error handling</li>
+                                <li class="contribution-item">Interactive photo gallery and carousel</li>
+                                <li class="contribution-item">Search and filter functionality</li>
+                                <li class="contribution-item">Local storage data management</li>
+                                <li class="contribution-item">Dynamic content rendering</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="team-member">
+                        <div class="member-photo">👨‍🎨</div>
+                        <div class="member-name">David Thompson</div>
+                        <div class="member-id">Student ID: 2021004</div>
+                        <div class="member-role">Quality Assurance & Testing Specialist</div>
+                        <div class="member-description">
+                            David is meticulous about quality and user experience. He specializes in comprehensive
+                            testing, cross-browser compatibility, and performance optimization. His thorough approach to
+                            quality assurance ensures that every feature works flawlessly across all devices and
+                            browsers.
+                        </div>
+                        <div class="member-contributions">
+                            <div class="contributions-title">Key Contributions:</div>
+                            <ul class="contribution-list">
+                                <li class="contribution-item">Cross-browser compatibility testing</li>
+                                <li class="contribution-item">Mobile responsiveness optimization</li>
+                                <li class="contribution-item">Performance testing and optimization</li>
+                                <li class="contribution-item">Bug testing and resolution</li>
+                                <li class="contribution-item">User experience testing and feedback</li>
+                                <li class="contribution-item">Documentation and project coordination</li>
+                            </ul>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">AutoDeal by the Numbers</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Cars Listed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Verified Dealers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p>📧 info@autodeal.com</p>
+                        <p>📞 +60 17-543-2133</p>
+                        <p>📍 123 Auto Street, Car City, CC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/about.js"> </script>
+</body>
+
+</html>

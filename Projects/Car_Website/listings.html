@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Car - AutoDeal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/listings.css"> 
+
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listings.html" class="nav-link active">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link">Sell</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Find Your Perfect Car</h1>
+            <p>Browse our extensive collection of quality vehicles from trusted dealers and sellers</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-layout">
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+                <h3 class="filter-title">Filter Results</h3>
+                
+                <div class="filter-group">
+                    <label for="makeFilter">Make</label>
+                    <select class="filter-select" id="makeFilter">
+                        <option value="">All Makes</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="ford">Ford</option>
+                        <option value="bmw">BMW</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="audi">Audi</option>
+                        <option value="porsche">Porsche</option>
+                        <option value="rangerover">Range Rover</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="modelFilter">Model</label>
+                    <select class="filter-select" id="modelFilter">
+                        <option value="">All Models</option>
+                        <option value="iX1">iX1</option>
+                        <option value="camry">Camry</option>
+                        <option value="corolla">Corolla</option>
+                        <option value="sv">SV</option>
+                        <option value="mustang">Mustang</option>
+                        <option value="macan">Macan</option>
+                        <option value="a200">A200</option>
+                        <option value="a1">A1</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Year Range</label>
+                    <div class="filter-range">
+                        <input type="number" class="filter-input" placeholder="Min" id="yearMin" min="1990" max="2024">
+                        <span>-</span>
+                        <input type="number" class="filter-input" placeholder="Max" id="yearMax" min="1990" max="2024">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="mileageRange">Mileage (up to <span id="mileageValue">100,000</span> miles)</label>
+                    <input type="range" class="range-slider" id="mileageRange" min="0" max="200000" value="100000" step="5000">
+                    <div class="range-values">
+                        <span>0</span>
+                        <span>200,000+</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priceRange">Price (up to $<span id="priceValue">50,000</span>)</label>
+                    <input type="range" class="range-slider" id="priceRange" min="0" max="100000" value="50000" step="1000">
+                    <div class="range-values">
+                        <span>$0</span>
+                        <span>$100,000+</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="locationFilter">Location</label>
+                    <input type="text" class="filter-input" placeholder="City, State or ZIP" id="locationFilter">
+                </div>
+
+                <div class="filter-group">
+                    <label>Transmission</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="automatic" value="automatic">
+                            <label for="automatic">Automatic</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="manual" value="manual">
+                            <label for="manual">Manual</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cvt" value="cvt">
+                            <label for="cvt">CVT</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Fuel Type</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="gasoline" value="gasoline">
+                            <label for="gasoline">Gasoline</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hybrid" value="hybrid">
+                            <label for="hybrid">Hybrid</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="electric" value="electric">
+                            <label for="electric">Electric</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="diesel" value="diesel">
+                            <label for="diesel">Diesel</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Seller Type</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="dealer" value="dealer">
+                            <label for="dealer">Dealer</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="private" value="private">
+                            <label for="private">Private Seller</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="certified" value="certified">
+                            <label for="certified">Certified Dealer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="apply-filters" id="applyFilters">Apply Filters</button>
+                <button class="clear-filters" id="clearFilters">Clear All</button>
+            </aside>
+
+            <!-- Listings Section -->
+            <section class="listings-section">
+                <div class="listings-header">
+                    <div class="results-count">
+                        <strong id="resultsCount">24</strong> cars found
+                    </div>
+                    <div class="view-controls">
+                        <div class="view-toggle">
+                            <button class="view-btn active" id="gridView">Grid</button>
+                            <button class="view-btn" id="listView">List</button>
+                        </div>
+                        <select class="sort-select" id="sortSelect">
+                            <option value="relevance">Sort by Relevance</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="year-new">Year: Newest First</option>
+                            <option value="year-old">Year: Oldest First</option>
+                            <option value="mileage-low">Mileage: Low to High</option>
+                            <option value="mileage-high">Mileage: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div class="loading" id="loadingState" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p>Loading vehicles...</p>
+                </div>
+
+                <!-- Car Listings Grid -->
+                <div class="listings-grid" id="carListings">
+                    <!-- Car listings will be populated here by JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <button id="prevPage" disabled>← Previous</button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button id="nextPage">Next →</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📧 info@autodeal.com</p>
+                        <p>📞 +60 17-543-2133</p>
+                        <p>📍 123 Auto Street, Car City, CC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/listings.js"> </script>
+</body>
+</html>

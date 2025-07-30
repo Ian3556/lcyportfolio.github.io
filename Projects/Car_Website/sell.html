@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car - AutoDeal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/sell.css"> 
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listings.html" class="nav-link">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link active">Sell</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sell Your Car</h1>
+            <p>Get the best value for your vehicle with our easy listing process</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Login Required Message -->
+            <div class="login-required" id="loginRequired">
+                <h2>Login Required</h2>
+                <p>Please log in to your account to list your car for sale. This helps us verify sellers and provide a secure marketplace.</p>
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="showLogin">Login</button>
+                    <button class="btn btn-outline" id="showSignup">Create Account</button>
+                </div>
+            </div>
+
+            <!-- Sell Form -->
+            <div class="form-container" id="sellForm" style="display: none;">
+                <!-- Step Progress -->
+                <div class="step-progress">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Car Information</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Photos & Description</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Pricing & Contact</div>
+                    </div>
+                </div>
+
+                <!-- Form Content -->
+                <div class="form-content">
+                    <form id="carListingForm">
+                        <!-- Step 1: Car Information -->
+                        <div class="form-step active" data-step="1">
+                            <div class="step-header">
+                                <h2>Car Information</h2>
+                                <p>Tell us about your vehicle's basic details</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="make" class="required">Make</label>
+                                    <select id="make" name="make" required>
+                                        <option value="">Select Make</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="honda">Honda</option>
+                                        <option value="ford">Ford</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="mercedes">Mercedes-Benz</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="volkswagen">Volkswagen</option>
+                                        <option value="nissan">Nissan</option>
+                                        <option value="hyundai">Hyundai</option>
+                                        <option value="kia">Kia</option>
+                                        <option value="mazda">Mazda</option>
+                                        <option value="subaru">Subaru</option>
+                                        <option value="lexus">Lexus</option>
+                                        <option value="acura">Acura</option>
+                                        <option value="infiniti">Infiniti</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="error-message" id="makeError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="model" class="required">Model</label>
+                                    <input type="text" id="model" name="model" placeholder="e.g., Camry, Civic, F-150" required>
+                                    <div class="error-message" id="modelError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="year" class="required">Year</label>
+                                    <select id="year" name="year" required>
+                                        <option value="">Select Year</option>
+                                    </select>
+                                    <div class="error-message" id="yearError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mileage" class="required">Mileage</label>
+                                    <input type="number" id="mileage" name="mileage" placeholder="e.g., 45000" min="0" required>
+                                    <div class="error-message" id="mileageError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="vin" class="required">VIN</label>
+                                    <input type="text" id="vin" name="vin" placeholder="17-character VIN number" maxlength="17" required>
+                                    <div class="error-message" id="vinError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="color" class="required">Color</label>
+                                    <input type="text" id="color" name="color" placeholder="e.g., White, Black, Silver" required>
+                                    <div class="error-message" id="colorError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="bodyType" class="required">Body Type</label>
+                                    <select id="bodyType" name="bodyType" required>
+                                        <option value="">Select Body Type</option>
+                                        <option value="sedan">Sedan</option>
+                                        <option value="suv">SUV</option>
+                                        <option value="hatchback">Hatchback</option>
+                                        <option value="coupe">Coupe</option>
+                                        <option value="convertible">Convertible</option>
+                                        <option value="truck">Truck</option>
+                                        <option value="van">Van</option>
+                                        <option value="wagon">Wagon</option>
+                                    </select>
+                                    <div class="error-message" id="bodyTypeError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="transmission" class="required">Transmission</label>
+                                    <select id="transmission" name="transmission" required>
+                                        <option value="">Select Transmission</option>
+                                        <option value="automatic">Automatic</option>
+                                        <option value="manual">Manual</option>
+                                        <option value="cvt">CVT</option>
+                                    </select>
+                                    <div class="error-message" id="transmissionError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fuelType" class="required">Fuel Type</label>
+                                    <select id="fuelType" name="fuelType" required>
+                                        <option value="">Select Fuel Type</option>
+                                        <option value="gasoline">Gasoline</option>
+                                        <option value="diesel">Diesel</option>
+                                        <option value="hybrid">Hybrid</option>
+                                        <option value="electric">Electric</option>
+                                    </select>
+                                    <div class="error-message" id="fuelTypeError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="drivetrain" class="required">Drivetrain</label>
+                                    <select id="drivetrain" name="drivetrain" required>
+                                        <option value="">Select Drivetrain</option>
+                                        <option value="fwd">Front-Wheel Drive (FWD)</option>
+                                        <option value="rwd">Rear-Wheel Drive (RWD)</option>
+                                        <option value="awd">All-Wheel Drive (AWD)</option>
+                                        <option value="4wd">4-Wheel Drive (4WD)</option>
+                                    </select>
+                                    <div class="error-message" id="drivetrainError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="engine">Engine</label>
+                                    <input type="text" id="engine" name="engine" placeholder="e.g., 2.4L 4-Cylinder">
+                                    <div class="error-message" id="engineError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="doors" class="required">Number of Doors</label>
+                                    <select id="doors" name="doors" required>
+                                        <option value="">Select Doors</option>
+                                        <option value="2">2 Doors</option>
+                                        <option value="4">4 Doors</option>
+                                        <option value="5">5 Doors</option>
+                                    </select>
+                                    <div class="error-message" id="doorsError"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Photos & Description -->
+                        <div class="form-step" data-step="2">
+                            <div class="step-header">
+                                <h2>📸 Photos & Description</h2>
+                                <p>Upload photos and describe your vehicle</p>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="required">Vehicle Photos</label>
+                                <div class="file-upload" id="fileUpload">
+                                    <div class="file-upload-icon">📷</div>
+                                    <div class="file-upload-text">Click to upload photos or drag and drop</div>
+                                    <div class="file-upload-subtext">Upload up to 10 photos (JPG, PNG, max 5MB each)</div>
+                                    <input type="file" id="photoUpload" multiple accept="image/*" style="display: none;">
+                                </div>
+                                <div class="uploaded-files" id="uploadedFiles"></div>
+                                <div class="error-message" id="photosError"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="description" class="required">Vehicle Description</label>
+                                <textarea id="description" name="description" placeholder="Describe your vehicle's condition, features, maintenance history, and any other relevant details..." required></textarea>
+                                <div class="error-message" id="descriptionError"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="location" class="required">Location</label>
+                                <input type="text" id="location" name="location" placeholder="City, State" required>
+                                <div class="error-message" id="locationError"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Pricing & Contact -->
+                        <div class="form-step" data-step="3">
+                            <div class="step-header">
+                                <h2>Pricing & Contact</h2>
+                                <p>Set your price and contact preferences</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="price" class="required">Asking Price ($)</label>
+                                    <input type="number" id="price" name="price" placeholder="e.g., 25000" min="0" required>
+                                    <div class="error-message" id="priceError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Price Options</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="negotiable" name="negotiable">
+                                            <label for="negotiable">Price is negotiable</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="urgentSale" name="urgentSale">
+                                            <label for="urgentSale">Urgent sale</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactName" class="required">Contact Name</label>
+                                    <input type="text" id="contactName" name="contactName" placeholder="Your full name" required>
+                                    <div class="error-message" id="contactNameError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactEmail" class="required">Email Address</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" placeholder="your@email.com" required>
+                                    <div class="error-message" id="contactEmailError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactPhone" class="required">Phone Number</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" placeholder="(555) 123-4567" required>
+                                    <div class="error-message" id="contactPhoneError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Seller Type</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="radio" id="privateSeller" name="sellerType" value="private" checked>
+                                            <label for="privateSeller">Private Seller</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="radio" id="dealer" name="sellerType" value="dealer">
+                                            <label for="dealer">Dealer</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="radio" id="certifiedDealer" name="sellerType" value="certified">
+                                            <label for="certifiedDealer">Certified Dealer</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preview Step -->
+                        <div class="form-step" data-step="preview">
+                            <div class="step-header">
+                                <h2>👀 Preview Your Listing</h2>
+                                <p>Review your information before submitting</p>
+                            </div>
+
+                            <div class="preview-card">
+                                <div class="preview-header">
+                                    <h3 id="previewTitle">Loading...</h3>
+                                </div>
+                                <div class="preview-content">
+                                    <div class="preview-section">
+                                        <h4>Vehicle Details</h4>
+                                        <div id="vehiclePreview"></div>
+                                    </div>
+                                    <div class="preview-section">
+                                        <h4>Pricing & Contact</h4>
+                                        <div id="pricingPreview"></div>
+                                    </div>
+                                    <div class="preview-description">
+                                        <h4>Description</h4>
+                                        <p id="descriptionPreview"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-outline" id="prevBtn" style="display: none;">Previous</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                    <button type="button" class="btn btn-secondary" id="previewBtn" style="display: none;">Preview Listing</button>
+                    <button type="button" class="btn btn-primary" id="submitBtn" style="display: none;">Submit Listing</button>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div>
+                <h2>Listing Submitted Successfully!</h2>
+                <p>Your car listing has been submitted for review. We'll notify you once it's live on our platform.</p>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="location.href='listings.html'">View Listings</button>
+                    <button class="btn btn-outline" onclick="location.href='sell.html'">Sell Another Car</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p>📧 info@autodeal.com</p>
+                        <p>📞 +60 17-543-2133</p>
+                        <p>📍 123 Auto Street, Car City, CC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/sell.js"> </script>
+</body>
+</html>

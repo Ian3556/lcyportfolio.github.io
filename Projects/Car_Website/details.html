@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - AutoDeal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/detail.css">   
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-car">🚗</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AutoDeal</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listings.html" class="nav-link active">Buy</a></li>
+                    <li><a href="sell.html" class="nav-link">Sell</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="auth-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <span class="welcome-text">Welcome, <span id="username"></span>!</span>
+                    <button class="btn-logout">Log Out</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>. . 
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="listings.html" class="mobile-nav-link">Buy</a></li>
+            <li><a href="sell.html" class="mobile-nav-link">Sell</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <button class="btn-login mobile">Login</button>
+            <button class="btn-signup mobile">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html" class="breadcrumb-link">Home</a></li>
+                <li class="breadcrumb-separator">></li>
+                <li><a href="listings.html" class="breadcrumb-link">Buy a Car</a></li>
+                <li class="breadcrumb-separator">></li>
+                <li id="breadcrumbCar">Car Details</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <a href="listings.html" class="back-button">← Back to Listings</a>
+        </div>
+        
+        <div class="detail-layout">
+            <!-- Main Content Column -->
+            <div class="main-column">
+                <!-- Photo Gallery -->
+                <section class="photo-gallery">
+                    <div class="main-photo">
+                        <img id="mainPhoto" src="" alt="Car Photo">
+                    </div>
+                    <div class="photo-thumbnails" id="photoThumbnails">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Car Info Section -->
+                <section class="car-info-section">
+                    <h1 class="car-title" id="carTitle">Loading...</h1>
+                    
+                    <div class="car-price-info">
+                        <div class="main-price" id="mainPrice">$0</div>
+                        <div class="price-options">
+                            <div class="price-option">
+                                <h4>💰 Cash Price</h4>
+                                <div class="amount" id="cashPrice">$0</div>
+                                <div class="details">No financing needed</div>
+                            </div>
+                            <div class="price-option">
+                                <h4>📅 Monthly Payment</h4>
+                                <div class="amount" id="monthlyPayment">$0/mo</div>
+                                <div class="details">60 months @ 4.9% APR</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specifications -->
+                <section class="specifications">
+                    <h2 class="section-title">🔧 Specifications</h2>
+                    <div class="spec-grid" id="specGrid">
+                        <!-- Specifications will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Description -->
+                <section class="description-section">
+                    <h2 class="section-title">📝 Seller's Description</h2>
+                    <div class="description-text" id="carDescription">
+                        <!-- Description will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Map Section -->
+                <section class="map-section">
+                    <h2 class="section-title">📍 Location</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <p>🗺️ Interactive Map</p>
+                            <p>Location: <span id="carLocation">Loading...</span></p>
+                            <small>Map integration would show exact location</small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 class="section-title">✉️ Contact Seller</h3>
+                    
+                    <div class="alert alert-success" id="successAlert">
+                        Message sent successfully! The seller will contact you soon.
+                    </div>
+                    
+                    <div class="alert alert-error" id="errorAlert">
+                        Please log in to contact the seller.
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="senderName">Your Name *</label>
+                            <input type="text" id="senderName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="senderEmail">Your Email *</label>
+                            <input type="email" id="senderEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="senderPhone">Your Phone</label>
+                            <input type="tel" id="senderPhone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiryMessage">Message *</label>
+                            <textarea id="inquiryMessage" placeholder="Hi, I'm interested in this vehicle. Please contact me with more details." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p><strong>💼 Seller:</strong> <span id="sellerType">Loading...</span></p>
+                        <p><strong>📞 Response Time:</strong> Usually within 2-4 hours</p>
+                        <p><strong>✅ Verification:</strong> Identity verified</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Similar Cars Section -->
+    <section class="similar-cars">
+        <div class="container">
+            <h2 class="section-title">Similar Cars You Might Like</h2>
+            <div class="similar-cars-grid" id="similarCarsGrid">
+                <!-- Similar cars will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoDeal</h3>
+                    <p>Your trusted partner in buying and selling quality vehicles nationwide.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/logos/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="listings.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Valuation</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p>📧 info@autodeal.com</p>
+                        <p>📞 +60 17-543-2133</p>
+                        <p>📍 123 Auto Street, Car City, CC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 AutoDeal. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/pages/details.js"></script>
+
+</body>
+</html>

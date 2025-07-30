@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO And Metadata-->
+    <meta name="description" content="Portfolio of Ian, a Computer Science student showcasing projects and skills in HTML, CSS, JavaScript, and Python.">
+    <meta name="keywords" content="portfolio, web development, computer science, Ian">
+    <meta name="author" content="Ian">
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="index2.css">
+    <!--Website Icon-->
+    <link rel="icon" href="images/logot.png">
+    <!--Google Fonts Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--Icon Download-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--Website Tittle-->
+    <title>Ian's Portfolio</title>
+</head>
+
+<body class="dark-mode">
+    <div class="custom-cursor"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <!--Logo-->
+                <div class="logo" id="logo">
+                    <a href="#head"><img src="images/logot.png" alt="logo"></a>
+                </div>
+
+                <!--Navbar-->
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger">☰</span>
+                </button>
+
+                <ul id="nav-menu" class="nav-list">
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="switch-item">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Head-->
+        <section class="head" id="head">
+            <div class="hero-container">
+                <div class="glowing-effect">
+                    <div class="sparks">
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    </div>
+
+                    <h1 class="neon-text" data-text="Ian Lee" contenteditable="true">Ian Lee</h1>
+                </div>
+                <h3 class="tittle">Computer Science Student</h3>
+                <p class="des">A Bold Dreamer Carving Out My Unscripted Quest Through Life's Wild Adventure</p>
+            </div>
+            
+        </section>
+        <!--Skill Section-->
+        <section id="skill" class="skill">
+            <div class="container">
+                <h1 class="heading">Technical Skills</h1>
+            
+                <div class="technical-bars">
+                    <!--HTML Progression Bar-->
+                    <div class="bar"><ion-icon name="logo-html5" style="color: #c95d2e;"></ion-icon>
+                        <div class="info"><span>HTML</span></div>
+
+                        <div class="progress-line html">
+                        <span data-width="77"></span>
+                        </div>
+                    </div>
+
+                    <!--CSS Progression Bar-->
+                    <div class="bar"><ion-icon name="logo-css3" style="color: #147bbc;"></ion-icon>
+                        <div class="info"><span>CSS</span></div>
+                            
+                        <div class="progress-line css">
+                        <span data-width="65"></span>
+                        </div>
+                    </div>
+
+                    <!--JavaScript Progression Bar-->
+                    <div class="bar"><ion-icon name="logo-javascript" style="color: #b0bc1e;"></ion-icon>
+                        <div class="info"><span>JavaScript</span></div>
+                            
+                        <div class="progress-line javascript">
+                        <span data-width="45"></span>
+                        </div>
+                    </div>
+
+                    <!--Python Progression Bar-->
+                    <div class="bar"><ion-icon name="logo-python" style="color: #c32ec9;"></ion-icon>
+                        <div class="info"><span>Python</span></div>
+                            
+                        <div class="progress-line python">
+                        <span data-width="60"></span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <!--Professional Skills-->
+            <div class="container1">
+                <h1 class="heading">Professional Skills</h1>
+
+                <div class="skill-container">
+                    <!--Creativity-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-1">0%</div>
+                        </div>
+                        <div>Creativeness</div>
+                    </div>
+
+                    <!--Problem Solving-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-2">0%</div>
+                        </div>
+                        <div>Problem Solving</div>
+                    </div>
+                    
+                    <!--Critical Thinking-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-3">0%</div>
+                        </div>
+                        <div>Critical Thinking</div>
+                    </div>
+
+                    <!--Communication Skills-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-4">0%</div>
+                        </div>
+                        <div>Communication</div>
+                    </div>
+                    
+                    <!--Teamwork-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-5">0%</div>
+                        </div>
+                        <div>Teamwork</div>
+                    </div>
+
+                    <!--Adaptability-->
+                    <div class="skill-item">
+                        <div class="circular-bar">
+                        <svg width="120" height="120">
+                                <defs>
+                                    <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#0a7aca;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="circular-bg" cx="60" cy="60" r="50" />
+                                <circle class="circular-fg" cx="60" cy="60" r="50" data-percent="0" />
+                            </svg>
+                            <div class="skill-label" id="skill-percentage-6">0%</div>
+                        </div>
+                        <div>Adaptability</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Projects Section-->
+        <section id="project"  class="project">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="images/Project1.jpg" alt="Project 1" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Pokemon Website</h3>
+                            <p class="project-description">
+                                Pokemon website I built for fun. For testing and enchaning my basic for html 
+                            </p>
+                            <p class="project-tech">Technologies: HTML, CSS</p>
+                            <div class="project-links">
+                                <a href="Projects/Pokemon Page/pokemon.html" target="_blank" class="btn">Live Demo</a>
+                                <a href="#" class="btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="images/Project2.png" alt="Project 2" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Car Dealership Website</h3>
+                            <p class="project-description">
+                                This is a group assingment where we decided to built a car dealership website. 
+                            </p>
+                            <p class="project-tech">Technologies: HTML, CSS, JavaScript</p>
+                            <div class="project-links">
+                                <a href="Projects/Car_Website/index.html" target="_blank" class="btn">Live Demo</a>
+                                <a href="#" class="btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="images/Project3.jpeg" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">IMS</h3>
+                            <p class="project-description">
+                               This is a python based Inventory Management System(IMS).
+                            </p>
+                            <p class="project-tech">Technologies: Python, Tkinter </p>
+                            <div class="project-links">
+                                <a href="Projects/Python IMS/inventory_gui.py" target="_blank" class="btn">Live Demo</a>
+                                <a href="#" class="btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--About Section-->
+        <section id="about" class="about">
+            <div class="image-box">
+                <img src="images/imagebox.jpg" alt="image-box">
+            </div>
+
+            <div class="about-content">
+                <h1 class="slide-down">About Me</h1>
+                <div class="class-divider"></div>
+                <p class="slide-left">
+                Hey There! My Name is X or you can call me by my nickname Ian.<br>
+                I am currently studying at Sunway University pursuing a Bachelor's of Science (Computer Science) degree.<br>
+                I'm a big fan of pop music and funky art. I also have quite an interest in economics and finance. But I still get
+                curious about new technologies and coding skills.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+             <h2 class="contact-heading">Get In Touch</h2>
+        <p class="contact-subtitle">
+            I'm always open to discussing new opportunities and interesting projects. 
+            Feel free to reach out if you'd like to connect!
+        </p>
+
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>cylee3556@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><ion-icon name="call-outline"></ion-icon></div>
+                    <div class="info-content">
+                        <h3>Phone</h3>
+                        <p>+60 16-502-1161</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><ion-icon name="location-outline"></ion-icon></div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Subang Jaya, Selangor </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><ion-icon name="school-outline"></ion-icon></div>
+                    <div class="info-content">
+                        <h3>University</h3>
+                        <p>Sunway University<br>Computer Science Student</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="#" class="social-link" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#" class="social-link" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="What's this about?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or just say hello!" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                    </button>
+
+                    <div id="successMessage" class="success-message">
+                        Thank you! Your message has been sent successfully. I'll get back to you soon!
+                    </div>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ian's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script src="index.js"></script>
+ 
+</body>
+
+</html>
